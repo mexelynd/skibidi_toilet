@@ -2,6 +2,7 @@ import discord
 from discord.ext import commands
 import os
 import random 
+from tokennn import tokenn 
 
 intents = discord.Intents.default()
 intents.message_content = True
@@ -37,7 +38,7 @@ async def metal(ctx):
         # Dönüştürülen Discord kütüphane dosyasını bu değişkende saklayalım!
         picture = discord.File(f)
    # Daha sonra bu dosyayı bir parametre olarak gönderebiliriz!
-    await ctx.send(file=picture)
+    await ctx.send(file=picture,)
 
 @bot.command()
 async def kağıt(ctx):
@@ -47,6 +48,13 @@ async def kağıt(ctx):
    # Daha sonra bu dosyayı bir parametre olarak gönderebiliriz!
     await ctx.send(file=picture)
 
+@bot.command()
+async def çöp(ctx):
+    with open('copkutuları/gercekcopkutusu.webp', 'rb') as f:
+        # Dönüştürülen Discord kütüphane dosyasını bu değişkende saklayalım!
+        picture = discord.File(f)
+   # Daha sonra bu dosyayı bir parametre olarak gönderebiliriz!
+    await ctx.send(file=picture)
 
 @bot.command()
 async def hello(ctx):
@@ -54,4 +62,4 @@ async def hello(ctx):
 
 
 
-bot.run("MTE5NjE0NTcwMDc4MjczOTU3Nw.Gh8YXo.nFe12mjf0q1j9GHC7KN2QhTm51SX4KSfQvVuM0")
+bot.run(tokenn)
